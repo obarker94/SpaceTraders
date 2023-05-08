@@ -1,5 +1,6 @@
 import { createTRPCRouter } from "SpaceTraders/server/api/trpc";
 import { exampleRouter } from "SpaceTraders/server/api/routers/example";
+import { agentRouter } from "./routers/agent";
 
 /**
  * This is the primary router for your server.
@@ -8,6 +9,7 @@ import { exampleRouter } from "SpaceTraders/server/api/routers/example";
  */
 export const appRouter = createTRPCRouter({
   example: exampleRouter,
+  agent: agentRouter,
 });
 
 // export type definition of API
