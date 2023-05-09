@@ -1,11 +1,17 @@
 import { z } from "zod";
-import { CreateAgentSchema } from "SpaceTraders/components/molecules/CreateAgent/CreateAgent";
 
 import {
   createTRPCRouter,
   publicProcedure,
   protectedProcedure,
 } from "SpaceTraders/server/api/trpc";
+
+export const CreateAgentSchema = z.object({
+  agentName: z.string(),
+  faction: z.string(),
+});
+
+export type TCreateAgentSchema = z.infer<typeof CreateAgentSchema>;
 
 export const agentRouter = createTRPCRouter({
   create: publicProcedure

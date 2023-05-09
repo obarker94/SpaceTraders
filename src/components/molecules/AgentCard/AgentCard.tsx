@@ -1,14 +1,20 @@
 import { IconPicker } from 'SpaceTraders/components/atoms/IconPicker/IconPicker'
 import React from 'react'
 
-export const AgentCard = () => {
+export type TAgentCard = {
+  name: string
+  faction: string
+}
+
+
+export const AgentCard = ({ name, faction }: TAgentCard) => {
   return (
     <div className="grid gap-4 border-b-2 border-gray-200 pb-8 hover:bg-gray-200 p-8 cursor-pointer transform transition-all duration-100">
       <div className="flex gap-4 items-center">
         <div className="w-16 h-16 bg-gray-700 rounded-full" />
         <div className="grid gap-2">
-          <div className="font-semibold">BigChungus</div>
-          <div className="font-light text-sm">COSMIC</div>
+          <div className="font-semibold">{name}</div>
+          <div className="font-light text-sm">{faction}</div>
         </div>
       </div>
       <div className="flex gap-4 items-center">
