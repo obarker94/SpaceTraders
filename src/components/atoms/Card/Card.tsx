@@ -1,26 +1,18 @@
-import clsx from 'clsx'
 import React from 'react'
 
-export type TCardProps = {
-  contents: React.ReactNode
-  title?: React.ReactNode
-  actions?: React.ReactNode
-}
-
-export const Card = ({ contents, title, actions }: TCardProps) => {
-  const classes = clsx(
-    'bg-white',
-    'rounded-lg',
-    'shadow-lg',
-    `ring-2`,
-    `ring-rose-400`,
-  )
-
+export const Card = () => {
   return (
-    <div className={classes}>
-      {title && <div>{title}</div>}
-      <div>{contents}</div>
-      {actions && <div>{actions}</div>}
+    <div className="bg-gray-100/75 p-8 rounded-lg shadow-md grid gap-8">
+      <div className="text-3xl">Header</div>
+      <div className=" font-light">
+        Integer ac urna id justo varius feugiat.
+      </div>
+      <div className="font-light">
+        Duis quis ex posuere ex elementum sagittis.
+      </div>
+      <button className="px-6 py-4 text-white bg-black rounded-md">
+        Get Started
+      </button>
     </div>
   )
 }

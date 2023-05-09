@@ -11,14 +11,9 @@ export const PageLayout = ({ children }: TPageLayout) => {
     'flex-col',
     'items-center',
     'min-h-screen',
-    'bg-gradient-to-b',
-    'from-rose-950',
-    'to-gray-900',
-    'text-white',
+    'bg-gray-50',
     'text-2xl',
-    'font-mono',
   )
-
 
   return (
     <main data-testid="PageLayout" className={classes}>{children}</main>
