@@ -3,9 +3,10 @@ import { clsx } from 'clsx'
 
 export type TPageLayout = {
   children: React.ReactNode
+  className?: string
 }
 
-export const PageLayout = ({ children }: TPageLayout) => {
+export const PageLayout = ({ children, className }: TPageLayout) => {
   const classes = clsx(
     'flex',
     'flex-col',
@@ -13,6 +14,7 @@ export const PageLayout = ({ children }: TPageLayout) => {
     'min-h-screen',
     'bg-gray-50',
     'text-2xl',
+    className
   )
 
   return (
